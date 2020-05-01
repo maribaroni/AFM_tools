@@ -4,7 +4,7 @@
 %
 % NSMatlabUtilities toolbox (from Brucker corporation) is needed to get the curves.
 %
-% @author: Mariana P. M. A Baroni
+% @author: Mariana P. M. A Baroni, PhD
 % @last access: April 30, 2020
 %
 % Don't forget to cite it properly!
@@ -38,7 +38,7 @@ matrixRetrace = zeros(n,n);
 %vector = zeros(n,1);
 
 %******* Loop to get each curve
-interval = 512; % interval is parameter to set an interval to get the curves
+interval = 1; % interval is a parameter to set an interval to get the curves
 for i = 1 : interval : NumberOfCurves
     
     [trace, retrace, scaleUnit, dataTypeDesc] = GetForceVolumeForceCurveData(NSMU, NumberOfChannels, i, NSMU.METRIC);
