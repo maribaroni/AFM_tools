@@ -87,7 +87,7 @@ for currentFile = 1:length(fileLocations)
         [chanDesc] = NSMU.GetDataTypeDesc(2); %Chan 1 is Image channel, so grab force curve data type from chan 2
 
         %get F vs tip-sample separation plot of curve i
-        [xTrace, xRetrace, yTrace, yRetrace, xLabel, yLabel] = NSMU.CreatePeakForceForceCurveZplot(i, NSMU.METRIC, 0); %isSeparation? yes = 1, no = 0
+        [xTrace, xRetrace, yTrace, yRetrace, xLabel, yLabel] = NSMU.CreatePeakForceForceCurveZplot(i, NSMU.METRIC, 1); %isSeparation? yes = 1, no = 0
         minimum = yRetrace(size(yRetrace,1));
         yRetrace = yRetrace + abs(minimum);
                 
