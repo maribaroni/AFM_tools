@@ -6,10 +6,17 @@
 % NSMatlabUtilities toolbox (from Brucker corporation) is needed
 % to get the curves.
 %
+% Examples of NSMatlabUtilities toolbox (from Brucker corporation) was
+% used to calculate Young's Modulus, including
+% find the contact point and adhesion region functions
+%
 % @author: Mariana P. M. A Baroni, PhD
-% @last access: February 01, 2021
+% @last access: February 17, 2021
 %
 % Don't forget to cite it properly!
+% Baroni, M. P. M. A. 
+% Scripts in MATLAB to be used with AFM Nanoscope data and NSMatlabUtilities toolbox (from Brucker corporation). 
+% https://github.com/maribaroni/AFM_tools (2021).
 
 %****Sanitizing
 clear all %clear variables
@@ -88,6 +95,8 @@ for currentFile = 1:length(fileLocations)
 
         %get F vs tip-sample separation plot of curve i
         [xTrace, xRetrace, yTrace, yRetrace, xLabel, yLabel] = NSMU.CreatePeakForceForceCurveZplot(i, NSMU.METRIC, 1); %isSeparation? yes = 1, no = 0
+        
+        %Baseline correction
         minimum = yRetrace(size(yRetrace,1));
         yRetrace = yRetrace + abs(minimum);
                 
