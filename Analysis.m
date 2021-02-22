@@ -97,8 +97,8 @@ for currentFile = 1:length(fileLocations)
         [xTrace, xRetrace, yTrace, yRetrace, xLabel, yLabel] = NSMU.CreatePeakForceForceCurveZplot(i, NSMU.METRIC, 1); %isSeparation? yes = 1, no = 0
         
         %Baseline correction
-        minimum = yRetrace(size(yRetrace,1));
-        yRetrace = yRetrace + abs(minimum);
+        %minimum = yRetrace(size(yRetrace,1));
+        %yRetrace = yRetrace + abs(minimum);
                 
         %Store retrace
         matrixRetrace(:,count1) = yRetrace;%flipud(yRetrace);
