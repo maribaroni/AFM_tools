@@ -3,8 +3,9 @@ message: "If you use this software, please cite it as below."
 authors:
   - family-names: P. M. A. Baroni
     given-names: Mariana
-    orcid: 
+    orcid: 0000-0002-4670-122X
 title: "AFM tools"
 version: 1.0.0
 doi: 
+
 date-released: 2020-04-30
